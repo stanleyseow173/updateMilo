@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hit to send data</h1>
+    <form method="POST" data-th-action="@{/post}" data-th-object="${item}">
+        <table>
+            <tr>
+                <td>
+                    <h3>Item Name:</h4> 
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" name = "name" id="name" data-th-field="*{name}">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h3>Item Price:</h4> 
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" name = "price" id="price" data-th-field="*{price}">
+                </td>
+            </tr>
+        </table>
+        <button type="submit">Post Data</button>
+    </form>
+    
+</body>
+</html>

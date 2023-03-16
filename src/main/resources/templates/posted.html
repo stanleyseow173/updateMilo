@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Quotation</h1>
+    <h3 data-th-text="${quotation.quotation_id}"></h3>
+    <div class="container">
+        <table border="1">
+            <tr>
+                <td> name</td>
+                <td> username</td>
+                <td >price</td>
+                <td >id</td>
+                <td >dt</td>
+            </tr>
+            <tr data-th-each="item :${quotation.items}" >
+                <td data-th-text="${item.name}" ></td>
+                <td data-th-text="${item.username}" ></td>
+                <td data-th-text="${item.price}"></td>
+                <td data-th-text="${item.id}"></td>
+                <td data-th-text="${item.dt}"></td>
+            </tr>
+        </table>
+      </div>
+</body>
+</html>
