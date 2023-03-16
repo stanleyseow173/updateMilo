@@ -45,7 +45,7 @@ public class MiloController {
         JsonObject json = Json.createObjectBuilder()
             .add("name", name)
             .add("price", price)
-            .add("username","test").build();
+            .add("username","stanley").build();
         RequestEntity<String> req = RequestEntity
             .post(railwayURL)
             .contentType(MediaType.APPLICATION_JSON)
